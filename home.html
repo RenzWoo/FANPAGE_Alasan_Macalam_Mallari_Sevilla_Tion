@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Legends - Innovators of Our Time</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+    <div class="stars" id="stars"></div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#legends">Legends</a></li>
+            <li><a href="#innovations">Innovations</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>Tech Visionaries</h1>
+            <p>Pioneers Shaping Tomorrow</p>
+        </div>
+    </section>
+
+    <section class="leaders" id="legends">
+        <div class="leader">
+    	   <div class="leader-image">
+               <img src="elonmust.png" alt="Elon Musk">
+    	   </div>
+     	   <div class="leader-info">
+        	<h2>Elon Musk</h2>
+        	<div class="net-worth">$480 Billion</div>
+        	<div class="position">CEO of <span class="company">Tesla & SpaceX</span></div>
+        	<a href="elonmust.html" style="display: inline-block; margin-top: 20px; padding: 10px 25px; background: linear-gradient(135deg, #60a5fa, #3b82f6); color: white; text-decoration: none; border-radius: 25px; transition: all 0.3s ease;">Learn More</a>
+   	  </div>
+	</div>
+
+
+        <div class="leader">
+            <div class="leader-image">
+                <img src="mark.png" alt="Tech Leader 2">
+            </div>
+            <div class="leader-info">
+                <h2>Mark Zuckerberg</h2>
+                <div class="net-worth">$265.5 Billion</div>
+                <div class="position">CEO of <span class="company">Meta</span></div>
+            </div>
+        </div>
+
+        <div class="leader">
+            <div class="leader-image">
+                <img src="jeff.png" alt="Tech Leader 3">
+            </div>
+            <div class="leader-info">
+                <h2>Jeff Bezos</h2>
+                <div class="net-worth">$243.2 Billion</div>
+                <div class="position">CEO of <span class="company">Amazon</span></div>
+            </div>
+        </div>
+
+        <div class="leader">
+            <div class="leader-image">
+                <img src="billgates.png" alt="Tech Leader 3">
+            </div>
+            <div class="leader-info">
+                <h2>Bill Gates</h2>
+                <div class="net-worth">$105.8 Billion</div>
+                <div class="position">Co-founder of <span class="company">Microsoft</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="glow" id="glow"></div>
+
+    <script>
+        // Create animated stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numStars = 100;
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Glowing cursor effect
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.getElementById('glow');
+            glow.style.left = e.clientX - 100 + 'px';
+            glow.style.top = e.clientY - 100 + 'px';
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize
+        createStars();
+
+        // Observe leader cards for scroll animations
+        document.querySelectorAll('.leader').forEach(leader => {
+            leader.style.opacity = '0';
+            leader.style.transform = 'translateY(50px)';
+            leader.style.transition = 'all 0.8s ease';
+            observer.observe(leader);
+        });
+
+        // Navigation background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(10, 22, 40, 0.95)';
+            } else {
+                nav.style.background = 'rgba(10, 22, 40, 0.9)';
+            }
+        });
+    </script>
+</body>
+</html>
