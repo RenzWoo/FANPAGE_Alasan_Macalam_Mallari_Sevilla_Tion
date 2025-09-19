@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeff Bezos - Tech Visionary</title>
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="billgates.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard">
+        <a href="home.html" class="back-button">← Back to Home</a>
+        
+        <div class="profile-header">
+            <div class="profile-image">
+                <img src="jeff.png" alt="Jeff Bezos">
+            </div>
+            <div class="profile-info">
+                <h1>Jeff Bezos</h1>
+                <p class="profile-description">Founder of Amazon | Blue Origin CEO | Innovation Pioneer</p>
+                <p class="profile-subtitle">Revolutionizing e-commerce and space exploration through groundbreaking innovation and entrepreneurship.</p>
+            </div>
+        </div>
+
+        <div class="quick-stats">
+            <div class="stat-card">
+                <div class="stat-value">$243.2B</div>
+                <div class="stat-label">Net Worth</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">1994</div>
+                <div class="stat-label">Amazon Founded</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">1.6M+</div>
+                <div class="stat-label">Amazon Employees</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">2000</div>
+                <div class="stat-label">Blue Origin Founded</div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h2>Career Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1964</div>
+                        <div class="timeline-content">Born in Albuquerque, New Mexico</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1994</div>
+                        <div class="timeline-content">Founded Amazon in his garage</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2000</div>
+                        <div class="timeline-content">Founded Blue Origin</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2013</div>
+                        <div class="timeline-content">Acquired The Washington Post</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021</div>
+                        <div class="timeline-content">First Blue Origin human spaceflight</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Key Achievements</h2>
+                <ul class="achievements-list">
+                    <li class="achievement-item">Created world's largest e-commerce platform</li>
+                    <li class="achievement-item">Pioneered cloud computing with AWS</li>
+                    <li class="achievement-item">Revolutionized space travel with Blue Origin</li>
+                    <li class="achievement-item">Time's Person of the Year (1999)</li>
+                    <li class="achievement-item">Created over a million jobs worldwide</li>
+                </ul>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Business Empire</h2>
+                <div class="quick-stats" style="margin-top: 20px;">
+                    <div class="stat-card">
+                        <div class="stat-value">$1.5T+</div>
+                        <div class="stat-label">Amazon Value</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">200+</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                </div>
+                <p class="philanthropy-text">
+                    Amazon has transformed from an online bookstore to a global technology empire, revolutionizing e-commerce, cloud computing, artificial intelligence, and digital services.
+                </p>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Notable Quotes</h2>
+            <div class="quotes-grid">
+                <div class="quote-card">
+                    "The common question that gets asked in business is, 'why?' That's a good question, but an equally valid question is, 'why not?'"
+                </div>
+                <div class="quote-card">
+                    "I knew that if I failed I wouldn't regret that, but I knew the one thing I might regret is not trying."
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Image Gallery</h2>
+            <div class="image-gallery">
+                <div class="gallery-image">
+                    <img src="https://fortune.com/img-assets/wp-content/uploads/2020/02/GettyImages-1078542150.jpg?w=1440&q=90" alt="Jeff Bezos Portrait">
+                </div>
+                <div class="gallery-image">
+                    <img src="https://s.abcnews.com/images/Business/gty_jeff_bezos_ll_130805_16x9_992.jpg" alt="Jeff Bezos Amazon">
+                </div>
+                <div class="gallery-image">
+                    <img src="https://variety.com/wp-content/uploads/2024/12/Jeff-Bezos.jpg?w=1000&h=667&crop=1&resize=1360%2C907" alt="Jeff Bezos Blue Origin">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="glow" id="glow"></div>
+
+    <script>
+        // Create animated stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numStars = 100;
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Initialize stars
+        createStars();
+
+        // Glowing cursor effect
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.getElementById('glow');
+            glow.style.left = e.clientX - 100 + 'px';
+            glow.style.top = e.clientY - 100 + 'px';
+        });
+    </script>
+</body>
+</html>
