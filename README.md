@@ -14,7 +14,7 @@ The site is designed with a **space-inspired aesthetic** (stars background, glow
 
 ## 🚀 Features
 
-- **Home Page**  
+- **home_page.html**  
   - Hero section with animated gradient title and tagline  
   - Scrollable "Legends" cards featuring each tech leader  
   - Smooth scrolling and hover animations
@@ -25,13 +25,13 @@ The site is designed with a **space-inspired aesthetic** (stars background, glow
   - jeffbezos.html
   - billgates.html
 
-- **Gallery Page**  
+- **gallery.html**  
   - Organized sections for each leader  
   - Grid of images (4 per row)  
   - Hover zoom effect on images  
   - Captions beneath each image (from the `alt` attribute)  
 
-- **Innovations Page**  
+- **innovations.html**  
   - Dedicated sections for each leader’s groundbreaking projects  
   - Grid layout with cards for each innovation  
   - Responsive design (adapts to desktop and mobile)
