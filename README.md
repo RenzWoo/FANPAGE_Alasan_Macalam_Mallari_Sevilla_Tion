@@ -17,7 +17,13 @@ The site is designed with a **space-inspired aesthetic** (stars background, glow
 - **Home Page**  
   - Hero section with animated gradient title and tagline  
   - Scrollable "Legends" cards featuring each tech leader  
-  - Smooth scrolling and hover animations  
+  - Smooth scrolling and hover animations
+ 
+- **Innovators Page**  
+  - elonmusk.html
+  - mark.html
+  - jeffbezos.html
+  - billgates.html
 
 - **Gallery Page**  
   - Organized sections for each leader  
@@ -28,8 +34,8 @@ The site is designed with a **space-inspired aesthetic** (stars background, glow
 - **Innovations Page**  
   - Dedicated sections for each leader’s groundbreaking projects  
   - Grid layout with cards for each innovation  
-  - Responsive design (adapts to desktop and mobile)  
-
+  - Responsive design (adapts to desktop and mobile)
+ 
 - **Interactive Effects**  
   - Animated starry background  
   - Glowing cursor effect  
