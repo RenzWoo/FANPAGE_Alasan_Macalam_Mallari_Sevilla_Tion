@@ -1,6 +1,7 @@
 # FANPAGE_Alasan_Macalam_Mallari_Sevilla_Tion
 
 # 🌌 Tech Legends Fan Page
+By Alasan, Macalam, Mallari, Sevilla, Tion
 
 A fan-made website dedicated to the **tech visionaries** who shaped the modern world:  
 - Elon Musk  
